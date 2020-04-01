@@ -15,6 +15,8 @@ Replace the git `uri` with your own git repository URI (including the same `conf
 
 ## Step 3
 
+Clone this Git repository
+
 Push the Spring Boot Application to the same space
 
 ```
