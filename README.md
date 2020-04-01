@@ -1,1 +1,1 @@
-# spring-cloud-config-credhub
+# Spring Cloud Config Credhub Sample
