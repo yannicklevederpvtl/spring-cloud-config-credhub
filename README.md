@@ -28,7 +28,7 @@ You should get the two properties from the git repository
 
 ```
 {
-stringsampleproperty: ""mypropertyfromgit"",
+stringsampleproperty: "mypropertyfromgit",
 intsampleproperty: 5
 }
 ```
@@ -48,7 +48,7 @@ You should get the two properties but the `stringsampleproperty` has been replac
 
 ```
 {
-stringsampleproperty: ""mysecretpropertyfromcredhubt"",
+stringsampleproperty: "mysecretpropertyfromcredhubt",
 intsampleproperty: 5
 }
 ```
