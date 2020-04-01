@@ -48,7 +48,7 @@ You should get the two properties but the `stringsampleproperty` has been replac
 
 ```
 {
-stringsampleproperty: "mysecretpropertyfromcredhubt",
+stringsampleproperty: "mysecretpropertyfromcredhub",
 intsampleproperty: 5
 }
 ```
