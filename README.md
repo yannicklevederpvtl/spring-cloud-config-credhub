@@ -2,18 +2,18 @@
 
 ## Step 1
 
-Install the  Cloud Foundry CLI Plugin following the instructions [here](https://docs.pivotal.io/spring-cloud-services/3-1/common/cf-cli-plugin.html).
+Install the  Cloud Foundry CLI Plugin following the instructions [here](https://docs.pivotal.io/spring-cloud-services/3-1/common/cf-cli-plugin.html)
 
 ## Step 2
 
-Clone the git `config-repo` repository of properties
+Clone the git `config-repo` repository of properties:
 ```
 $ git clone https://github.com/yannicklevederpvtl/config-repo.git
 ```
 
 ## Step 3
 
-Create a Sring Cloud Config Server in your Space
+Create a Sring Cloud Config Server in your Space:
 ```
 $ cf create-service p.config-server standard configserver -c '{"git": { "uri": "https://github.com/yannicklevederpvtl/config-repo.git"} }'
 ```
@@ -24,7 +24,7 @@ Replace the git `uri` with your own git `config-repo` repository URI
 
 Clone this git `spring-cloud-config-credhub` repository
 
-Push the Spring Boot Application to the same Space
+Push the Spring Boot Application to the same Space:
 
 ```
 $ cd spring-cloud-config-credhub
@@ -32,7 +32,7 @@ $ cf push
 ```
 
 Once the application is up and running, access this link: https://config-demo-service.YOURCFDOMAIN/properties
-You should get the two properties from the git `config-repo` repository
+You should get the two properties from the git `config-repo` repository:
 
 ```
 {
@@ -45,16 +45,16 @@ intsampleproperty: 5
 
 Manage this same `stringsampleproperty` property into a secret store from Credhub for Config Server
 
-A secret stored using a path beginning with a specific app name (for example, a path beginning with myapp/) will only be made available to the app that uses that name (in this example, an app named `config-demo-service`).
+A secret stored using a path beginning with a specific app name (for example, a path beginning with myapp/) will only be made available to the app that uses that name (in this example, an app named `config-demo-service`)
 
-Add this secret store for Config Server
+Add this secret store for Config Server:
 
 ```
 cf config-server-add-credhub-secret configserver config-demo-service/default/master/mysecretstore '{"config-demo-service.stringsampleproperty": "mysecretpropertyfromcredhub"}'
 ```
 
 Restart the application and access again this link: https://config-demo-service.YOURDOMAIN/properties
-You should get the two properties but the `stringsampleproperty` has been replaced by the property value from Credhub, in fact secret properties take precedence over git properties.
+You should get the two properties but the `stringsampleproperty` has been replaced by the property value from Credhub, in fact secret properties take precedence over git properties:
 
 ```
 {
@@ -74,7 +74,7 @@ Important, app-specific secrets (like `config-demo-service/default/master/mysecr
 
 
 
-To remove the secret store of properties
+To remove the secret store of properties:
 ```
 cf config-server-remove-credhub-secret configserver config-demo-service/default/master/mysecretstore 
 ```
