@@ -13,16 +13,15 @@ $ git clone https://github.com/yannicklevederpvtl/config-repo.git
 
 ### Step 3
 
-Create a Sring Cloud Config Server in your Space:
+Create a Sring Cloud Config Server in your Space (Replace the git `uri` with your own git `config-repo` repository URI):
 ```
 $ cf create-service p.config-server standard configserver -c '{"git": { "uri": "https://github.com/yannicklevederpvtl/config-repo.git"} }'
 ```
-Replace the git `uri` with your own git `config-repo` repository URI
 
 
 ### Step 4
 
-Clone this git `spring-cloud-config-credhub` repository
+Clone this project git `spring-cloud-config-credhub` repository
 
 Push the Spring Boot Application to the same Space:
 
@@ -47,7 +46,7 @@ Manage this same `stringsampleproperty` property into a secret store from Credhu
 
 A secret stored using a path beginning with a specific app name (for example, a path beginning with myapp/) will only be made available to the app that uses that name (in this example, an app named `config-demo-service`)
 
-Add this secret store for Config Server:
+To add this secret store for Config Server:
 
 ```
 cf config-server-add-credhub-secret configserver config-demo-service/default/master/mysecretstore '{"config-demo-service.stringsampleproperty": "mysecretpropertyfromcredhub"}'
