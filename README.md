@@ -1,4 +1,4 @@
-# Spring Cloud Config Credhub Sample
+# Spring Cloud Config Credhub + Spring Boot Client Sample
 
 ### Step 1
 
