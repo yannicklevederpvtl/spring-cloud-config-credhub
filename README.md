@@ -13,7 +13,7 @@ $ git clone https://github.com/yannicklevederpvtl/config-repo.git
 
 ### Step 3
 
-Create a Sring Cloud Config Server in your Space (Replace the git `uri` with your own git `config-repo` repository URI):
+Create a Sring Cloud Config Server from Spring Cloud Service v3.x in your Space (Replace the git `uri` with your own git `config-repo` repository URI):
 ```
 $ cf create-service p.config-server standard configserver -c '{"git": { "uri": "https://github.com/yannicklevederpvtl/config-repo.git"} }'
 ```
