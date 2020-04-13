@@ -27,6 +27,7 @@ Push the Spring Boot Application to the same Space:
 
 ```
 $ cd spring-cloud-config-credhub
+$ mvn package
 $ cf push
 ```
 
