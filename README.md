@@ -69,7 +69,7 @@ A secret stored using a path beginning with `application/` will be made availabl
 cf config-server-add-credhub-secret configserver application/default/master/mysecretstore '{"config-demo-service.stringsampleproperty": "mysecretpropertyfromcredhub"}'
 ```
 
-Important, app-specific secrets (like `config-demo-service/default/master/mysecretstore`) take precedence over default secrets (`application/default/master/mysecret`)
+Important, app-specific secrets (like `config-demo-service/default/master/mysecretstore`) take precedence over default secrets (`application/default/master/mysecretstore`)
 
 
 
