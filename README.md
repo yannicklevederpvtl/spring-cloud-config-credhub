@@ -78,4 +78,4 @@ To remove the secret store of properties:
 cf config-server-remove-credhub-secret configserver config-demo-service/default/master/mysecretstore 
 ```
 
-Get more information about managing your information with Credhub [here](https://docs.pivotal.io/spring-cloud-services/3-1/common/config-server/managing-secrets-with-credhub.html).
+Get more information about managing secrets with Credhub [here](https://docs.pivotal.io/spring-cloud-services/3-1/common/config-server/managing-secrets-with-credhub.html).
